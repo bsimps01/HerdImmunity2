@@ -21,4 +21,11 @@ class Person:
         '''
 
         #TODO: finish this method
-        pass
+        
+        if random.uniform(0,1) < self.infection.mortality_num:
+            self.is_alive = False
+            return False
+        else:
+            self.is_vaccinated = True
+            self.infection = None
+            return True
