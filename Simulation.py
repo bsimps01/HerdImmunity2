@@ -129,7 +129,7 @@ class Simulation:
         assert infected_person == None
         assert self.total_vaccinated > 1
 
-    def time_step(self, infected):
+    def time_step(self, infected): #Abdullah
         ''' For every infected person interact with a random person from the population 10 times'''
 
         for infected_person in infected:
@@ -143,7 +143,7 @@ class Simulation:
                 self.interaction(infected_person, random_person)
 
         assert self.population_size > 1
-    def interaction(self, infected, random_person):
+    def interaction(self, infected, random_person): #Abdullah
         '''If the infected person is the same object as the random_person return and do nothing
         if the random person is not alive return and do nothing
         if the random person is vaccinated return and do nothing
